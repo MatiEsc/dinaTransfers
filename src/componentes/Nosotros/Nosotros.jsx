@@ -9,6 +9,14 @@ const Nosotros = () => {
     threshold: 0.2,
   });
 
+  // Definir la función para desplazar la vista hacia la sección de contacto
+  const scrollToContacto = () => {
+    const contactoSection = document.getElementById("contacto");
+    if (contactoSection) {
+      contactoSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <div
       id="nosotros"
@@ -33,7 +41,9 @@ const Nosotros = () => {
           viaje con nosotros sea una experiencia memorable, caracterizada por la seguridad y el
           confort.
         </p>
-        <button className="botonContacto">CONTÁCTANOS</button>
+        <button className="botonContacto" onClick={scrollToContacto}>
+          CONTÁCTANOS
+        </button>
       </div>
     </div>
   );

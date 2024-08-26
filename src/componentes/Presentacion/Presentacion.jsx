@@ -10,6 +10,13 @@ function Presentacion() {
     threshold: 0.8, // Define cuánto del componente debe ser visible para activar la animación
   });
 
+  const scrollToContacto = () => {
+    const element = document.getElementById("contacto");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div id="home" className="presentacion">
       <div
@@ -21,7 +28,9 @@ function Presentacion() {
           Te ofrecemos traslados confiables y cómodos <br />
           por la Patagonia
         </h2>
-        <button className="botonReserva">RESERVA TU TRASLADO</button>
+        <button className="botonReserva" onClick={scrollToContacto}>
+          RESERVA TU TRASLADO
+        </button>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import "animate.css";
 import { GrMail } from "react-icons/gr";
 import { GrInstagram } from "react-icons/gr";
 import { BiLogoFacebookSquare } from "react-icons/bi";
+import axios from "axios";
 import validator from "validator";
 
 import "./Contacto.css";
@@ -22,6 +23,8 @@ const Contacto = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,18 +33,12 @@ const Contacto = () => {
 
   const validate = () => {
     const newErrors = {};
-    if (!validator.isLength(formData.name, { min: 1 })) {
-      newErrors.name = "El nombre es requerido.";
-    }
-    if (!validator.isEmail(formData.email)) {
+    if (!formData.name) newErrors.name = "El nombre es requerido.";
+    if (!formData.email || !validator.isEmail(formData.email))
       newErrors.email = "El email no es válido.";
-    }
-    if (formData.phone && !validator.isMobilePhone(formData.phone, "any", { strictMode: false })) {
+    if (formData.phone && !validator.isMobilePhone(formData.phone, "any"))
       newErrors.phone = "El teléfono no es válido.";
-    }
-    if (!validator.isLength(formData.message, { min: 1 })) {
-      newErrors.message = "El mensaje es requerido.";
-    }
+    if (!formData.message) newErrors.message = "El mensaje es requerido.";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -49,8 +46,22 @@ const Contacto = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      // Aquí puedes enviar los datos al backend
-      console.log("Datos enviados:", formData);
+      axios
+        .post("https://formspree.io/f/xwpeyplp", formData, {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        })
+        .then((response) => {
+          setSuccessMessage("Mensaje enviado con éxito");
+          setErrorMessage("");
+          setFormData({ name: "", email: "", phone: "", message: "" });
+        })
+        .catch((error) => {
+          setErrorMessage("Error al enviar el mensaje. Inténtalo de nuevo.");
+          setSuccessMessage("");
+        });
     }
   };
 
@@ -66,14 +77,30 @@ const Contacto = () => {
           Estamos aquí para hacer tu viaje por la Patagonia lo más seguro, cómodo y placentero
           posible. No dudes en contactarnos para cualquier consulta o reserva.
           <br />
-          <GrMail className="icon-contacto" />
-          info@transfersdina.com
+          <a href="mailto:info@transfersdina.com" className="link-contacto">
+            <GrMail className="icon-contacto" />
+            info@transfersdina.com
+          </a>
           <br />
-          <GrInstagram className="icon-contacto" />
-          INSTAGRAM
+          <a
+            href="https://www.instagram.com/tu_usuario_instagram"
+            className="link-contacto"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GrInstagram className="icon-contacto" />
+            INSTAGRAM
+          </a>
           <br />
-          <BiLogoFacebookSquare className="icon-contacto" />
-          FACEBOOK
+          <a
+            href="https://www.facebook.com/tu_usuario_facebook"
+            className="link-contacto"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BiLogoFacebookSquare className="icon-contacto" />
+            FACEBOOK
+          </a>
         </p>
       </div>
       <div className={`formulario ${inView ? "animate__animated animate__fadeInRight" : ""}`}>
@@ -129,6 +156,8 @@ const Contacto = () => {
             Enviar
           </button>
         </form>
+        {successMessage && <p className="success">{successMessage}</p>}
+        {errorMessage && <p className="error">{errorMessage}</p>}
       </div>
     </div>
   );

@@ -82,6 +82,18 @@
   border-color: #ccc;
 }
 
+.link-contacto {
+  color: #f5e4d5; /* Color de texto del enlace */
+  text-decoration: none; /* Quita el subrayado del enlace */
+  display: flex; /* Alinea el ícono y el texto en una fila */
+  align-items: center; /* Alinea verticalmente el ícono y el texto */
+  font-family: "Montserrat", sans-serif; /* Usa la misma fuente para el texto */
+}
+
+.link-contacto:hover {
+  color: #eebb73; /* Color del enlace al pasar el cursor */
+}
+
 /* Estilos para el formulario */
 form {
   display: flex;
@@ -112,7 +124,6 @@ textarea {
 .icon-contacto {
   color: #eebb73;
   font-size: 20px;
-  padding-top: 20px;
   padding-right: 20px;
 }
 
@@ -125,6 +136,12 @@ textarea {
   padding: 0;
 }
 
+.success {
+  color: #eebb73;
+  font-weight: bold;
+  font-size: x-large;
+  margin-top: 10px;
+}
 /* Media Queries para dispositivos más pequeños */
 @media (max-width: 768px) {
   .containerContacto {
