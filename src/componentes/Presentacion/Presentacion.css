@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Merriweather+Sans:ital,wght@0,600;1,600&family=Moderustic:wght@300..800&display=swap");
+
+.presentacion {
+  background-image: url("/img/presentacion.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px; /* Padding para asegurar que el contenido no esté pegado a los bordes */
+  padding-top: 60px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total del contenedor */
+  overflow: hidden; /* Evita que el contenido animado se desborde */
+}
+
+.animated-container {
+  position: relative; /* Asegura que la animación esté contenida dentro del contenedor */
+  /* Puedes ajustar márgenes o rellenos aquí si es necesario */
+}
+
+.moderustic-titulo {
+  font-family: "Moderustic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 52px;
+  color: rgba(45, 60, 80); /* Color principal del texto */
+  text-shadow: 1px 1px 3px #eebb73, -1px -1px 3px #eebb73, 1px -1px 3px #eebb73,
+    -1px 1px 3px #eebb73; /* Sombra del texto */
+}
+
+.moderustic-subtitulo {
+  font-family: "Moderustic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  color: whitesmoke;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5), -1px -1px 3px rgba(0, 0, 0, 0.5),
+    1px -1px 3px rgba(0, 0, 0, 0.5), -1px 1px 3px rgba(0, 0, 0, 0.5), 0 0 2px #eebb73; /* Borde externo en color #eebb73 */
+}
+
+.botonReserva {
+  display: inline-block;
+  background-color: #eebb73;
+  color: #003d40;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+  border: 2px solid transparent;
+}
+
+.botonReserva:hover {
+  background-color: #003d40;
+  color: #eebb73;
+  border-color: #eebb73;
+  transform: scale(1.05);
+}
+
+.botonReserva:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 183, 77, 0.5);
+}
+
+.botonReserva:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  border-color: #ccc;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .presentacion {
+    height: auto;
+    padding: 10px;
+  }
+
+  .presentacion h1 {
+    font-size: 1.5em;
+  }
+
+  .presentacion h2 {
+    font-size: 1.2em;
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .presentacion h1 {
+    font-size: 1.2em;
+  }
+
+  .presentacion h2 {
+    font-size: 1em;
+    margin: 10px 0;
+  }
+}

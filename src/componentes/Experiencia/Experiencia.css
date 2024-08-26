@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+
+.servicios {
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  min-height: 100vh; /* Usa min-height en lugar de height para mantener flexibilidad */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: -15px;
+  overflow: hidden; /* Evita que el contenido animado se desborde */
+}
+
+.animated-container {
+  position: relative; /* Asegura que la animación esté contenida dentro del contenedor */
+}
+
+.titulos {
+  margin-bottom: 30px;
+  width: 100%; /* Asegura que los títulos no se desborden */
+  position: relative; /* Necesario para posicionar el pseudo-elemento */
+}
+
+.h2Servicios {
+  color: rgba(45, 60, 80);
+  font-size: 2.5em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+  position: relative; /* Asegura que el pseudo-elemento se posicione en relación con el título */
+}
+
+.h2Servicios::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Ajusta este valor para el espacio entre el texto y la línea */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px; /* Ajusta el ancho de la línea según tu diseño */
+  height: 4px; /* Ajusta la altura de la línea según tu diseño */
+  background-color: #eebb73; /* Color de la línea */
+}
+
+.h3ServicioTitulo {
+  color: #5c9bbd;
+  font-size: 1.4em;
+  margin: 10px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.pExperiencia {
+  font-style: italic;
+  font-family: "Montserrat", sans-serif;
+  font-size: large;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espacio entre tarjetas */
+  padding: 0 20px; /* Espacio horizontal */
+  box-sizing: border-box;
+  width: 100%; /* Asegura que el contenedor de las tarjetas ocupe todo el ancho disponible */
+}
+
+.card {
+  background-color: #f5f7fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 calc(30% - 40px); /* Flexibilidad de las tarjetas */
+  max-width: calc(30% - 40px); /* Ancho máximo de las tarjetas */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para el color de fondo y la sombra */
+}
+
+.card:hover {
+  background-color: #eebb73; /* Color de fondo al pasar el mouse */
+  color: #fff; /* Cambia el color del texto para asegurar que sea legible sobre el nuevo fondo */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa al pasar el mouse */
+}
+
+.card:hover .icon-servicios {
+  color: #fff; /* Cambia el color del icono al pasar el mouse */
+}
+
+.card:hover .h3ServicioTitulo {
+  color: #fff; /* Cambia el color del título al pasar el mouse */
+}
+
+.card img {
+  border-radius: 50%;
+  width: 50px;
+}
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .h2Servicios {
+    font-size: 2em;
+  }
+
+  .h3ServicioTitulo {
+    font-size: 1.2em;
+  }
+
+  .card-container {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    padding: 0; /* Elimina el padding horizontal */
+  }
+
+  .card {
+    max-width: 100%; /* Ocupa todo el ancho del contenedor */
+    margin-bottom: 20px; /* Espacio entre tarjetas en la columna */
+  }
+}
+
+@media (max-width: 480px) {
+  .h2Servicios {
+    font-size: 1.5em;
+  }
+
+  .h3ServicioTitulo {
+    font-size: 1em;
+  }
+}

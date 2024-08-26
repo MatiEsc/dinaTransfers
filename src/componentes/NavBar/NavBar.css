@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+
+#navbar {
+  background-color: rgba(45, 60, 80, 0.99);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 90px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  position: sticky;
+  margin-top: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+#navbar .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+#navbar .logo-text-container {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Ajusta el espacio entre el texto y el icono */
+}
+
+#navbar .logo-icon {
+  font-size: 48px; /* Ajusta el tamaño del icono según tus necesidades */
+  color: #eebb73; /* Ajusta el color del icono según tus necesidades */
+}
+
+#navbar .logo {
+  height: 30px;
+  margin-right: 10px;
+  margin-left: 120px;
+  width: 90px;
+  height: 90px;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin-right: 120px;
+  padding: 0;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: #f5e4d5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: transform 0.3s, font-size 0.3s;
+}
+
+#navbar a:hover {
+  text-decoration: scale(1.1);
+  font-size: 15px;
+  color: #eebb73;
+}
+
+#navbar .logo-container .logoLink {
+  text-decoration: none;
+  color: inherit;
+  transition: none;
+  font-size: 0px;
+}
+
+#navbar .logo-container .logoLink:hover {
+  transform: none;
+  font-size: 0px;
+}
+
+.allura-regular {
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 52px; /* Ajusta el tamaño según tus necesidades */
+  margin-left: 40px;
+  color: #eebb73;
+}
+
+.nav_toggle {
+  display: none;
+}
+
+.logoMobile {
+  margin-left: 24px;
+  width: 60x;
+  height: 60px;
+}
+
+/* ESTILOS PARA DISPOSITIVOS PEQUEÑOS */
+@media (max-width: 768px) {
+  #navbar ul li a {
+    text-decoration: none;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: rgba(45, 60, 80, 0.99);
+    text-align: center;
+  }
+  #navbar ul li a::before {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    #navbar .nav_items {
+      position: absolute;
+      top: 70px;
+      right: -7.5rem;
+      background: rgba(45, 60, 80, 0.99);
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      height: 200px;
+      justify-content: center;
+      align-items: center;
+      transform: translatey(-130%);
+      transition: 0.3s ease all;
+      padding: 10px 0;
+    }
+  }
+
+  #navbar .logo-text-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Ajusta el espacio entre el texto y el icono */
+  }
+
+  #navbar .logo-icon {
+    font-size: 40px; /* Ajusta el tamaño del icono según tus necesidades */
+    color: #eebb73; /* Ajusta el color del icono según tus necesidades */
+    margin-left: 1rem;
+  }
+
+  .allura-regular {
+    font-family: "Allura", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px; /* Ajusta el tamaño según tus necesidades */
+    margin-left: 80px;
+    color: #eebb73;
+  }
+  .nav_items a {
+    text-align: center;
+  }
+
+  .nav_toggle {
+    display: flex !important;
+    flex-direction: column;
+    margin: 15px;
+  }
+
+  .nav_toggle span {
+    width: 30px;
+    height: 4px;
+    background: #eebb73;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    transform-origin: 5px 0px;
+    transition: all 0.2s linear;
+  }
+
+  .close span {
+    transform: rotate(45deg) translate(0px, 0px);
+  }
+
+  .close span:nth-child(2) {
+    display: none;
+  }
+
+  .close span:nth-child(3) {
+    transform: rotate(-45deg) translate(-5px, 1px);
+  }
+
+  .open {
+    transform: translateX(0) !important;
+  }
+}

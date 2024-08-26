@@ -1,0 +1,112 @@
+.container {
+  display: grid;
+  background-color: #f5f7fa;
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "imagen texto";
+}
+.imagen {
+  grid-area: imagen;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.imagen img {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 2%;
+}
+.texto {
+  grid-area: texto;
+  padding: 40px;
+}
+
+.h2Nosotros {
+  color: rgba(45, 60, 80);
+  font-family: "Montserrat", sans-serif;
+  font-size: 2em; /* Ajuste de tamaño de fuente */
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 0 20px 0; /* Márgenes para ajustar el espacio entre el título y el texto */
+  margin-top: 40px;
+}
+
+.texto p {
+  margin-bottom: 30px; /* Espacio después del párrafo */
+  font-family: "Montserrat", sans-serif;
+  font-size: larger;
+  text-align: left;
+}
+
+.texto p br {
+  content: "";
+  display: block;
+  margin-bottom: 20px; /* Espacio entre las líneas después del <br> */
+}
+
+.botonContacto {
+  display: inline-block;
+  background-color: #eebb73;
+  color: #003d40;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  text-align: left; /* Alineación del botón */
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.botonContacto:hover {
+  background-color: #003d40;
+  color: #eebb73;
+  border-color: #eebb73;
+  transform: scale(1.05);
+}
+
+.botonContacto:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 183, 77, 0.5);
+}
+
+.botonContacto:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  border-color: #ccc;
+}
+
+/* Media Queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "texto"
+      "imagen";
+  }
+
+  .imagen img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .texto {
+    padding: 10px;
+    margin-left: 20px;
+  }
+
+  .botonContacto {
+    margin: 20px auto; /* Centra el botón en dispositivos más pequeños */
+    margin-left: 100px;
+  }
+}
