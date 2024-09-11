@@ -48,7 +48,7 @@ const FAQ = () => {
     {
       question: "¿Cómo puedo cancelar una reserva?",
       answer:
-        "Para cancelar una reserva, envíanos un mensaje haciendo click o completa el formulario con los detalles de tu reserva.",
+        "Para poder cancelar una reserva, envíanos un mensaje haciendo click o completa el formulario con los detalles de tu reserva.",
     },
     {
       question: "¿Qué sucede si mi vuelo se retrasa?",
