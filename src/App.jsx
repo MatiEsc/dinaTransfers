@@ -6,9 +6,10 @@ import Experiencia from "./componentes/Experiencia/Experiencia";
 import Contacto from "./componentes/Contacto/Contacto";
 import Footer from "./componentes/Footer/Footer";
 import WhatsAppButton from "./componentes/WhatsAppButton/WhatsAppButton";
+import Tarifas from "./componentes/Tarifas/Tarifas";
+import FAQ from "./componentes/Faq/Faq";
 
 import "./App.css";
-import Tarifas from "./componentes/Tarifas/Tarifas";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Tarifas />
         <Nosotros />
         <Experiencia />
+        <FAQ />
         <Contacto />
         <WhatsAppButton />
         <Footer />

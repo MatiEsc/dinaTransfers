@@ -68,7 +68,7 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-            <a href="#tarifas" onClick={(e) => handleClick(e, "tarifas")}>
+            <a href="#faq" onClick={(e) => handleClick(e, "faq")}>
               Tarifas
             </a>
           </li>
