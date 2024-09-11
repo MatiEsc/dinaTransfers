@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./Faq.css"; // Asegúrate de crear este archivo CSS
+import "./PreguntasFrecuentes.css"; // Asegúrate de crear este archivo CSS
 
-const Faq = () => {
+const PreguntasFrecuentes = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const openWhatsAppChat = () => {
@@ -79,4 +79,4 @@ const Faq = () => {
   );
 };
 
-export default Faq;
+export default PreguntasFrecuentes;

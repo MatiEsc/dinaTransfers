@@ -7,9 +7,9 @@ import Contacto from "./componentes/Contacto/Contacto";
 import Footer from "./componentes/Footer/Footer";
 import WhatsAppButton from "./componentes/WhatsAppButton/WhatsAppButton";
 import Tarifas from "./componentes/Tarifas/Tarifas";
-import Faq from "./componentes/Faq/Faq";
 
 import "./App.css";
+import PreguntasFrecuentes from "./componentes/FAQ/PreguntasFrecuentes";
 
 function App() {
   return (
@@ -21,7 +21,8 @@ function App() {
         <Tarifas />
         <Nosotros />
         <Experiencia />
-        <Faq />
+        <PreguntasFrecuentes />
+
         <Contacto />
         <WhatsAppButton />
         <Footer />
