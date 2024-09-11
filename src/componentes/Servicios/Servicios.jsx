@@ -5,7 +5,7 @@ import { MdOutlineLocalAirport } from "react-icons/md";
 import { GrGroup } from "react-icons/gr";
 import { FaSkiing } from "react-icons/fa";
 
-import "./Servicios.css";
+import "./Servicios.css"; // Asegúrate de que este archivo CSS esté importado correctamente
 
 const Servicios = () => {
   const { ref, inView } = useInView({

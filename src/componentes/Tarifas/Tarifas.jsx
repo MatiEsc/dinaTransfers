@@ -21,7 +21,7 @@ const Tarifas = () => {
   return (
     <div
       id="tarifas"
-      className={`servicios ${inView ? "animate__animated animate__fadeInUpBig" : ""}`}
+      className={`tarifas ${inView ? "animate__animated animate__fadeInUpBig" : ""}`}
       ref={ref}
     >
       <section className="titulos">

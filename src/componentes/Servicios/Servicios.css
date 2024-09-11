@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
 
 .servicios {
-  background-color: white;
+  background-color: #f5f7fa !important; /* Color de fondo cambiado a lo que era el fondo de la card */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -72,7 +72,7 @@
 }
 
 .card {
-  background-color: #f5f7fa;
+  background-color: white; /* Color de fondo cambiado a lo que era el fondo del componente */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   padding: 20px;
