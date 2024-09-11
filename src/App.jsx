@@ -5,8 +5,10 @@ import Nosotros from "./componentes/Nosotros/Nosotros";
 import Experiencia from "./componentes/Experiencia/Experiencia";
 import Contacto from "./componentes/Contacto/Contacto";
 import Footer from "./componentes/Footer/Footer";
+import WhatsAppButton from "./componentes/WhatsAppButton/WhatsAppButton";
 
 import "./App.css";
+import Tarifas from "./componentes/Tarifas/Tarifas";
 
 function App() {
   return (
@@ -15,9 +17,11 @@ function App() {
         <NavBar />
         <Presentacion />
         <Servicios />
+        <Tarifas />
         <Nosotros />
         <Experiencia />
         <Contacto />
+        <WhatsAppButton />
         <Footer />
       </div>
     </>

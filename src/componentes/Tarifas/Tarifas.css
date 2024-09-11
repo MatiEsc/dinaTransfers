@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+
+.servicios {
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: -15px;
+  overflow: hidden;
+}
+
+.titulos {
+  margin-bottom: 30px;
+  width: 100%;
+  position: relative;
+}
+
+.h2Servicios {
+  color: rgba(45, 60, 80);
+  font-size: 2.5em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+  position: relative;
+}
+
+.h2Servicios::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #eebb73;
+}
+
+.cuadros-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Permite que los cuadros se envuelvan en pantallas pequeñas */
+}
+
+.cuadro-tarifas {
+  background-color: #f5f7fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  max-width: 500px;
+  width: 100%; /* Permite que los cuadros ocupen todo el ancho disponible */
+  text-align: left;
+}
+
+.titulo-cuadro {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.info-cuadro {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.lista-tarifas {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-tarifas li {
+  font-size: 1.2em;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.lista-tarifas li:last-child {
+  border-bottom: none;
+}
+
+.aviso-adicional {
+  margin: 20px auto;
+  max-width: 600px;
+  font-size: 0.9em;
+  color: #666;
+  text-align: left;
+}
+
+.cta-container {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.botonContacto {
+  display: inline-block;
+  background-color: #eebb73;
+  color: #003d40;
+  padding: 12px 24px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.botonContacto:hover {
+  background-color: #003d40;
+  color: #eebb73;
+  border-color: #eebb73;
+  transform: scale(1.05);
+}
+
+.botonContacto:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 183, 77, 0.5);
+}
+
+.botonContacto:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  border-color: #ccc;
+}
+
+.consulta {
+  font-size: 1.1em;
+  color: #333;
+  margin-top: 15px;
+}
+
+.link-consulta {
+  color: #eebb73;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer; /* Asegura que el cursor cambie a mano */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Suaviza la transición del color y subrayado */
+}
+
+.link-consulta:hover {
+  color: #003d40; /* Cambia el color del texto al hacer hover */
+  text-decoration: underline; /* Subraya el texto al hacer hover */
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .h2Servicios {
+    font-size: 2em;
+  }
+
+  .titulo-cuadro {
+    font-size: 1.5em;
+  }
+
+  .lista-tarifas li {
+    font-size: 1em;
+  }
+
+  .btn-reserva {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .h2Servicios {
+    font-size: 1.5em;
+  }
+
+  .titulo-cuadro {
+    font-size: 1.2em;
+  }
+}

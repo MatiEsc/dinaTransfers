@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <p>
-        &copy; {new Date().getFullYear()} Dina Transfers. Explorando Bariloche con seguridad y
+        &copy; {new Date().getFullYear()} Dina Transfers. Explorando la Patagonia con seguridad y
         confort. Creado por{" "}
         <a
           href="https://www.linkedin.com/in/matias-escobar"

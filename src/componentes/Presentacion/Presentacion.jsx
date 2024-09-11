@@ -10,11 +10,13 @@ function Presentacion() {
     threshold: 0.8, // Define cuánto del componente debe ser visible para activar la animación
   });
 
-  const scrollToContacto = () => {
-    const element = document.getElementById("contacto");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const openWhatsAppChat = () => {
+    const phoneNumber = "1167626764"; // Número de teléfono en formato internacional sin el signo +
+    const message =
+      "Hola, estoy interesado en reservar un traslado. Por favor, contáctenme con más detalles."; // Mensaje predefinido
+    const encodedMessage = encodeURIComponent(message);
+    const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(url, "_blank");
   };
 
   return (
@@ -28,7 +30,7 @@ function Presentacion() {
           Te ofrecemos traslados confiables y cómodos <br />
           por la Patagonia
         </h2>
-        <button className="botonReserva" onClick={scrollToContacto}>
+        <button className="botonReserva" onClick={openWhatsAppChat}>
           RESERVA TU TRASLADO
         </button>
       </div>
